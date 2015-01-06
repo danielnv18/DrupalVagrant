@@ -10,7 +10,7 @@ vagrantfile-local:
         network:
             private_network: 192.168.56.18
             forwarded_port:
-                gnYPtqnl51iZ:
+                MjyhCGo9vyyd:
                     host: '5931'
                     guest: '22'
         post_up_message: ''
@@ -32,7 +32,7 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            gR0MlJhqIexE:
+            rx6uPPmQhN78:
                 owner: www-data
                 group: www-data
                 source: ./
@@ -87,7 +87,7 @@ apache:
     modules:
         - rewrite
     vhosts:
-        ntv0rzinzrss:
+        rwvc6qr1imkf:
             servername: drupal8.dev
             serveraliases:
                 - www.drupal8.dev
@@ -96,7 +96,7 @@ apache:
             setenv:
                 - 'APP_ENV dev'
             directories:
-                qitz1qtwpmdv:
+                8kstex5chi6p:
                     provider: directory
                     path: /var/www/drupal8.dev
                     options:
@@ -124,7 +124,7 @@ nginx:
         proxy_buffers: '4 256k'
     upstreams: {  }
     vhosts:
-        0z62s83beuir:
+        zsgltlb10lz3:
             proxy: ''
             server_name: awesome.dev
             server_aliases:
@@ -152,6 +152,8 @@ php:
             - cli
             - intl
             - mcrypt
+            - gd
+            - curl
         pear: {  }
         pecl:
             - pecl_http
@@ -193,7 +195,7 @@ drush:
 ruby:
     install: '1'
     versions:
-        QnFbXUc74NPM:
+        QPGvJzp5eAcC:
             default: '1'
             version: 2.1.2
             bundler: '1'
@@ -204,7 +206,7 @@ python:
     install: '1'
     packages: {  }
     versions:
-        tzhaW5CXSt7e:
+        bgJqPnweqeAk:
             version: ''
 mysql:
     install: '1'
@@ -212,7 +214,7 @@ mysql:
     root_password: root
     adminer: 0
     databases:
-        fyBuwuQc7X68:
+        SrTZqoFmAvjQ:
             grant:
                 - ALL
             name: drupal8.dev
