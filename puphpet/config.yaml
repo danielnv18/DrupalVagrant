@@ -10,7 +10,7 @@ vagrantfile-local:
         network:
             private_network: 192.168.56.18
             forwarded_port:
-                MjyhCGo9vyyd:
+                lIPw7149AEb7:
                     host: '5931'
                     guest: '22'
         post_up_message: ''
@@ -32,7 +32,7 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            rx6uPPmQhN78:
+            EBp2Ymmq1gdf:
                 owner: www-data
                 group: www-data
                 source: ./
@@ -68,10 +68,20 @@ server:
 users_groups:
     install: '1'
     groups: {  }
-    users: {  }
+    users:
+        - 'admin:www-data'
 cron:
     install: '1'
-    jobs: {  }
+    jobs:
+        4gnbmfueevpt:
+            monthday: ''
+            name: ''
+            user: ''
+            command: ''
+            minute: ''
+            hour: ''
+            weekday: ''
+            month: ''
 firewall:
     install: '1'
     rules: null
@@ -87,7 +97,7 @@ apache:
     modules:
         - rewrite
     vhosts:
-        rwvc6qr1imkf:
+        7i9pn9lofvkt:
             servername: drupal8.dev
             serveraliases:
                 - www.drupal8.dev
@@ -96,7 +106,7 @@ apache:
             setenv:
                 - 'APP_ENV dev'
             directories:
-                8kstex5chi6p:
+                ao0vqqbuytzj:
                     provider: directory
                     path: /var/www/drupal8.dev
                     options:
@@ -115,7 +125,7 @@ apache:
             ssl_key: ''
             ssl_chain: ''
             ssl_certs_dir: ''
-    mod_pagespeed: 0
+    mod_pagespeed: '1'
 nginx:
     install: '0'
     settings:
@@ -124,7 +134,7 @@ nginx:
         proxy_buffers: '4 256k'
     upstreams: {  }
     vhosts:
-        zsgltlb10lz3:
+        kkhifynsorrm:
             proxy: ''
             server_name: awesome.dev
             server_aliases:
@@ -150,10 +160,10 @@ php:
     modules:
         php:
             - cli
+            - curl
+            - gd
             - intl
             - mcrypt
-            - gd
-            - curl
         pear: {  }
         pecl:
             - pecl_http
@@ -195,7 +205,7 @@ drush:
 ruby:
     install: '1'
     versions:
-        QPGvJzp5eAcC:
+        SkdPidYwlsZT:
             default: '1'
             version: 2.1.2
             bundler: '1'
@@ -206,7 +216,7 @@ python:
     install: '1'
     packages: {  }
     versions:
-        bgJqPnweqeAk:
+        LroPLNnivK1T:
             version: ''
 mysql:
     install: '1'
@@ -214,7 +224,7 @@ mysql:
     root_password: root
     adminer: 0
     databases:
-        SrTZqoFmAvjQ:
+        C2VnvogqbnCD:
             grant:
                 - ALL
             name: drupal8.dev
@@ -283,7 +293,7 @@ elastic_search:
         version: 1.4.1
         java_install: true
 solr:
-    install: '0'
+    install: '1'
     settings:
         version: 4.10.2
         port: '8984'
