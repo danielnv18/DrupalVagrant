@@ -1,7 +1,9 @@
 # Ignore everything
 *
+puphpet/config-custom.yaml
 
 # But not these files...
 !.gitignore
 !Vagrantfile
 !puphpet/
+
